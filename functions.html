@@ -1,0 +1,29 @@
+<!-- 1)create an html page to explian the uses of various predefined functions in a string and math object in javascript -->
+ <!-- 2)evaluating javavscript event handling for every click of a button to change background color of an html page. -->
+<html>
+    <head>
+        <title>
+            javavscript
+        </title>
+    </head>
+    <body>
+        <h1>hello</h1>
+        <button>click me</button>
+       <script>
+       function changeBgcolor(){
+        hexa='123456789ABCDE';
+        let color="#";
+        for(i=0;i<6;i++)
+       {
+         color+=hexa[Math.floor(Math.random() * 16)] ; 
+       }
+       return color;
+    }
+       
+        document.querySelector('button').addEventListener('click',()=>{
+         document.querySelector("body").style.backgroundColor= changeBgcolor()
+
+       });
+       </script> 
+    </body>
+</html>
